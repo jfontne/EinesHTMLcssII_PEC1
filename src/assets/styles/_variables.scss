@@ -1,0 +1,61 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;700&family=Open+Sans:wght@300;500&family=Roboto+Slab:wght@200&display=swap');
+
+
+//General
+$fonsWeb: Black;
+$colorBase: white;
+$fontColor: Black;
+$fonsFitxa: white;
+$ampladaImatgePrincipal: 80vw;
+$ampladaImatgeMobil: 100vw;
+$tipusLletra: 'Barlow', sans-serif;
+
+//Responsive
+$ampladaPC: 1024px;
+
+//Slides
+$ampladaSlide: 500px;
+$alçadaSlide: 350px;
+
+$mqMinWidth: 420px;
+
+@mixin fitxaMonument($colorFons: $fonsFitxa){
+  background-color: $colorFons;
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  color: $fontColor;
+  display: block;
+  border-radius: 0px;
+
+  .monument-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: $ampladaImatgePrincipal;
+      padding: 10px;
+      border-radius: 25px;
+      @media (max-width: $ampladaPC)  {
+        padding: 0;
+        border-radius: 0;
+        width: $ampladaImatgeMobil;
+      }
+    }
+    
+    p{
+      width: $ampladaImatgePrincipal;
+      padding: 10px;
+      font-size: 16pt;
+      @media (max-width: $ampladaPC)  {
+        padding: 10px 0 10px 0;
+      }
+    }
+  }
+  @media (max-width: $ampladaPC)  {
+      padding: 5px;
+
+    }
+}

@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    color: aquamarine;
+  }
+a:active {
+    text-decoration: underline;
+    text-decoration-color: aquamarine;
+    font-weight: bold;
+  }
+
+
+body {
+  display: flex;
+  flex-direction: column;
+   margin: 0;
+  //padding: 2rem;
+  font-family: $tipusLletra;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $fonsWeb;
+  color: $fontColor;
+  @media (max-width: $ampladaPC)  {
+    
+  }
+}
+
+.encapçalat{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position:fixed;
+  z-index: 10;
+  background-color: black;
+  color: white;
+  width: 100%;
+  box-shadow: 0px 11px 16px -6px rgba(0,0,0,0.75);
+  h1{
+    padding: 0 20px 0 20px;
+  }
+  @media (max-width: $ampladaPC)  {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+}
+
+.menu{
+  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    li{
+      padding: 0 20px 0 20px;
+    }
+  }
+}
+
+.contingut-plana{
+
+  .monument-container1{
+    @include fitxaMonument($colorFons: yellow);
+  }
+
+  .monument-container2{
+    @include fitxaMonument($colorFons: #99AAFF);
+  }
+
+  .monument-container3{
+    @include fitxaMonument($colorFons: #99FFAA);
+  }
+
+  .monument-container4{
+    @include fitxaMonument;
+  }
+  @media (max-width: $ampladaPC)  {
+    padding: 0;
+  }
+}
+
+.titol-monument{
+  text-align: center;
+  font-weight: bold;
+  font-size: 38pt;
+  text-transform: uppercase;
+  margin-top: 100px;
+  @media (max-width: $ampladaPC)  {
+    margin-top: 150px;
+    font-size: 28px;
+  }
+}
+
+
+
+.uoc-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  color: white;
+}
+
